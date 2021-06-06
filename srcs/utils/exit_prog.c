@@ -21,7 +21,8 @@ int	exit_prog(int status, t_vars *vars)
 		write(STDERR_FILENO, "Error\n", 6);
 	if (status == EXIT_SUCCESS)
 		write(STDOUT_FILENO, "Bye!\n", 5);
-	destroy_split(vars->split);
+	(void)vars;
+	// destroy_split(vars->split);
 	exit(status);
 	return (0);
 }

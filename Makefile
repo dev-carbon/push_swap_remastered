@@ -14,18 +14,26 @@ NAME = push_swap
 
 CC = clang
 
-CCFLAG = -Wall -Wextra -Werror
+CCFLAG = -Wall -Wextra -Werror -g
 
 LIBFT = -Llibft -lft
 
-SANITIZE = -g -fsanitize=address
+SANITIZE = -fsanitize=address,undefined
 
 HEADERS = -I./includes/ \
 		-I./libft/ \
+		-I./srcs/stack/ \
 		-I./srcs/utils/ \
 		-I./srcs/validate/ \
 
 SRCS_MANDATORY = srcs/driver/push_swap.c \
+				srcs/stack/create.c \
+				srcs/stack/fill.c \
+				srcs/stack/push.c \
+				srcs/stack/pop.c \
+				srcs/stack/peek.c \
+				srcs/stack/is_empty.c \
+				srcs/stack/print_stack.c \
 				srcs/utils/destroy_split.c \
 				srcs/utils/exit_prog.c \
 				srcs/validate/is_valid_args.c \

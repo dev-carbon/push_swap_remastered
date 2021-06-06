@@ -13,6 +13,8 @@
 #ifndef UTILS_H
 # define UTILS_H
 
+# include "struct.h"
+
 int	exit_prog(int status, t_vars *vars);
 void	destroy_split(char **split);
 

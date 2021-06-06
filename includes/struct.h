@@ -16,13 +16,13 @@
 typedef struct s_element
 {
 	int				value;
-	struct s_stack	*next;
+	struct s_element	*next;
 }	t_element;
 
 typedef struct s_stack
 {
-	int length;
-	t_element elements;
+	int size;
+	t_element *elements;
 }	t_stack;
 
 typedef struct s_vars

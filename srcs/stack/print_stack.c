@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validate.h                                         :+:      :+:    :+:   */
+/*   print_stack.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: humanfou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/02 13:25:40 by humanfou          #+#    #+#             */
-/*   Updated: 2021/06/02 13:25:43 by humanfou         ###   ########.fr       */
+/*   Created: 2021/06/06 22:01:20 by humanfou          #+#    #+#             */
+/*   Updated: 2021/06/06 22:01:22 by humanfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VALIDATE_H
-# define VALIDATE_H
+#include "stack.h"
+#include "libs.h"
+#include "struct.h"
 
-# include "struct.h"
+void	print_stack(t_stack *stack)
+{
+	t_element	*el;
 
-int	is_valid_args(int ac, char **av, t_vars *vars);
-int	is_valid_int(char *str);
-
-#endif
+	el = stack->elements;
+	printf("\e[4msize\e[0m: %d\n", stack->size);
+	while (el)
+	{
+		printf("%d\n", el->value);
+		el = el->next;
+	}
+}

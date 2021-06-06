@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create_stack.c                                     :+:      :+:    :+:   */
+/*   ft_issign.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: humanfou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/01 16:59:03 by humanfou          #+#    #+#             */
-/*   Updated: 2021/06/01 16:59:06 by humanfou         ###   ########.fr       */
+/*   Created: 2021/06/06 22:33:27 by humanfou          #+#    #+#             */
+/*   Updated: 2021/06/06 22:35:32 by humanfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libs.h"
-#include "struct.h"
+#include "libft.h"
 
-t_stack *new_stack(int size)
+int	ft_issign(char c)
 {
-	return (NULL);
+	if (c != '+' && c != '-')
+		return (0);
+	return (1);
 }

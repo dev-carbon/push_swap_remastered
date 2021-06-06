@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validate.h                                         :+:      :+:    :+:   */
+/*   stack.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: humanfou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/02 13:25:40 by humanfou          #+#    #+#             */
-/*   Updated: 2021/06/02 13:25:43 by humanfou         ###   ########.fr       */
+/*   Created: 2021/06/06 21:56:24 by humanfou          #+#    #+#             */
+/*   Updated: 2021/06/06 21:56:26 by humanfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef VALIDATE_H
-# define VALIDATE_H
+#ifndef STACK_H
+# define STACK_H
 
 # include "struct.h"
 
-int	is_valid_args(int ac, char **av, t_vars *vars);
-int	is_valid_int(char *str);
+t_stack	*create(void);
+t_stack	*fill(t_stack *stack, char **list);
+t_stack	*push(t_stack *stack, int nbr);
+t_stack	*pop(t_stack *stack);
+int		peek(t_stack *stack);
+int		is_empty(t_stack *stack);
+t_stack	*sort(t_stack *stack);
+void	print_stack(t_stack *stack);
 
 #endif

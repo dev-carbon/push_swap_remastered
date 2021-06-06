@@ -6,7 +6,7 @@
 /*   By: humanfou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/26 16:22:13 by humanfou          #+#    #+#             */
-/*   Updated: 2021/04/17 16:39:02 by humanfou         ###   ########.fr       */
+/*   Updated: 2021/06/06 22:36:37 by humanfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 
 # define BUFFER_SIZE	1
 
+int					ft_issign(char c);
 void				ft_print_split(char **split);
 void				ft_putstrnl(char *str);
 void				ft_swap(int *a, int *b);
