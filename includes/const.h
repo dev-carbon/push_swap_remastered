@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create.c                                           :+:      :+:    :+:   */
+/*   const.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: humanfou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/01 16:59:03 by humanfou          #+#    #+#             */
-/*   Updated: 2021/06/07 00:24:28 by humanfou         ###   ########.fr       */
+/*   Created: 2021/06/07 13:05:51 by humanfou          #+#    #+#             */
+/*   Updated: 2021/06/07 13:05:54 by humanfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libs.h"
-#include "stack.h"
+#ifndef CONST_H
+# define CONST_H
 
-t_stack *create()
-{
-	t_stack	*stack;
+# define ASC 1
+# define DESC 0
 
-	stack = (t_stack *)malloc(sizeof(t_stack));
-	stack->size = 0;
-	stack->elements = NULL;
-	return (stack);
-}
+#endif

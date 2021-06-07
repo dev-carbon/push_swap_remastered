@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create.c                                           :+:      :+:    :+:   */
+/*   is_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: humanfou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/01 16:59:03 by humanfou          #+#    #+#             */
-/*   Updated: 2021/06/07 00:24:28 by humanfou         ###   ########.fr       */
+/*   Created: 2021/06/07 12:40:13 by humanfou          #+#    #+#             */
+/*   Updated: 2021/06/07 12:40:18 by humanfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libs.h"
 #include "stack.h"
+#include "libs.h"
+#include "const.h"
 
-t_stack *create()
+int	is_sorted(t_stack *stack, int *flag)
 {
-	t_stack	*stack;
+	t_element *el;
 
-	stack = (t_stack *)malloc(sizeof(t_stack));
-	stack->size = 0;
-	stack->elements = NULL;
-	return (stack);
+	(void)flag;
+	el = stack->elements;
+	while (el->next != NULL)
+	{
+		if (el->value > el->next->value)
+			return (0);
+		el = el->next;
+	}
+	return (1);
 }

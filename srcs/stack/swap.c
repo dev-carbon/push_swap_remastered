@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create.c                                           :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: humanfou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/01 16:59:03 by humanfou          #+#    #+#             */
-/*   Updated: 2021/06/07 00:24:28 by humanfou         ###   ########.fr       */
+/*   Created: 2021/06/07 13:35:11 by humanfou          #+#    #+#             */
+/*   Updated: 2021/06/07 13:35:12 by humanfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libs.h"
-#include "stack.h"
+#include "ops.h"
 
-t_stack *create()
+t_stack	*swap(t_stack *stack)
 {
-	t_stack	*stack;
+	int	tmp;
 
-	stack = (t_stack *)malloc(sizeof(t_stack));
-	stack->size = 0;
-	stack->elements = NULL;
+	tmp = stack->elements->value;
+	stack->elements->value = stack->elements->next->value;
+	stack->elements->next->value = tmp;
 	return (stack);
 }

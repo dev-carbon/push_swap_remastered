@@ -27,8 +27,9 @@ typedef struct s_stack
 
 typedef struct s_vars
 {
-	char **split;
-	char *str;
+	char	**split;
+	char	*str;
+	int		flag;
 }	t_vars;
 
 #endif

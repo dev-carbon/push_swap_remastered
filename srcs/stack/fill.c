@@ -13,7 +13,6 @@
 #include "stack.h"
 #include "libs.h"
 #include "libft.h"
-#include "struct.h"
 
 
 t_stack	*fill(t_stack *stack, char **list)

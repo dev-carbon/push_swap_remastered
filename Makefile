@@ -27,12 +27,18 @@ HEADERS = -I./includes/ \
 		-I./srcs/validate/ \
 
 SRCS_MANDATORY = srcs/driver/push_swap.c \
+				srcs/stack/swap.c \
+				srcs/stack/push.c \
+				srcs/stack/rotate.c \
+				srcs/stack/rev_rotate.c \
 				srcs/stack/create.c \
 				srcs/stack/fill.c \
 				srcs/stack/push.c \
 				srcs/stack/pop.c \
 				srcs/stack/peek.c \
+				srcs/stack/sort.c \
 				srcs/stack/is_empty.c \
+				srcs/stack/is_sorted.c \
 				srcs/stack/print_stack.c \
 				srcs/utils/destroy_split.c \
 				srcs/utils/exit_prog.c \
@@ -44,16 +50,16 @@ OBJS_MANDATORY = $(SRCS_MANDATORY: %.c=%.o)
 all: $(NAME)
 
 $(NAME): 	$(OBJS_MANDATORY)
-			$(MAKE) --directory=libft
-			$(CC) $(CCFLAG) $(HEADERS) $(SANITIZE) -o $@ $^ $(LIBFT)
+			@$(MAKE) --directory=libft
+			@$(CC) $(CCFLAG) $(HEADERS) $(SANITIZE) -o $@ $^ $(LIBFT)
 
 clean:
 	cd libft && $(MAKE) clean
-	$(RM) *.o
+	@$(RM) *.o
 
 fclean: clean
 	cd libft && $(MAKE) fclean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
 

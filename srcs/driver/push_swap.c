@@ -30,15 +30,9 @@ int	main(int ac, char **av)
 		if (!is_valid_args(ac, av, vars))
 			exit_prog(EXIT_FAILURE, vars);
 		stack = create();
-		stack = fill(stack, vars->split);
-		print_stack(stack);
-		printf("top: %d\n", peek(stack));
-		stack = pop(stack);
-		print_stack(stack);
-		printf("top: %d\n", peek(stack));
-		stack = pop(stack);
-		print_stack(stack);
-		printf("top: %d\n", peek(stack));
+		fill(stack, vars->split);
+		if (!is_sorted(stack, &vars->flag))
+			sort(stack);
 		exit_prog(EXIT_SUCCESS, vars);
 	}
 	return (0);

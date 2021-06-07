@@ -5,15 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: humanfou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/07 00:31:05 by humanfou          #+#    #+#             */
-/*   Updated: 2021/06/07 00:31:06 by humanfou         ###   ########.fr       */
+/*   Created: 2021/06/07 13:36:03 by humanfou          #+#    #+#             */
+/*   Updated: 2021/06/07 13:36:05 by humanfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libs.h"
-#include "struct.h"
-#include "utils.h"
 #include "stack.h"
+#include "libs.h"
+#include "utils.h"
 
 t_stack	*push(t_stack *stack, int nbr)
 {

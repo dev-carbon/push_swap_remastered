@@ -10,22 +10,11 @@
 #                                                                              #
 # **************************************************************************** #
 
-GREY =				\e[0;30m
-RED = 				\e[0;31m
-GREEN =				\e[0;32m
-YELLOW =			\e[0;33m
-BLUE =				\e[0;34m
-PURPLE =			\e[0;35m
-CYAN =				\e[0;36m
-WHITE =				\e[0;37m
-BOLD =				\e[0;1m
-RESET =				\e[0m
-
 NAME = libft.a
 
 CC = clang
 
-CFLAGS = -Wall -Werror -Wextra
+CCFLAGS = -Wall -Werror -Wextra
 
 LIB = ar rc
 
@@ -109,7 +98,7 @@ all: bonus
 
 bonus: $(OBJ) $(OBJ_BONUS)
 	@$(LIB) $(NAME) $^
-	@echo "${BOLD}${GREEN}${NAME} created.${RESET}"
+	@echo "${NAME} created."
 
 $(NAME):
 	@$(CC) $(CFLAGS) -c $(SRCS)
@@ -117,12 +106,11 @@ $(NAME):
 
 clean:
 	@/bin/rm -rf $(OBJ) $(OBJ_BONUS)
-	@echo "${BOLD}${YELLOW}Cleaned libft object files.${RESET}"
+	@echo "Cleaned libft object files."
 
 fclean: clean
 	@/bin/rm -f $(NAME)
-	@echo "${BOLD}${YELLOW}${NAME} removed.${RESET}"
-
+	@echo "${NAME} removed."
 
 re: fclean all
 

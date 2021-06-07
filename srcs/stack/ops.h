@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create.c                                           :+:      :+:    :+:   */
+/*   ops.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: humanfou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/01 16:59:03 by humanfou          #+#    #+#             */
-/*   Updated: 2021/06/07 00:24:28 by humanfou         ###   ########.fr       */
+/*   Created: 2021/06/07 13:35:00 by humanfou          #+#    #+#             */
+/*   Updated: 2021/06/07 13:35:02 by humanfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libs.h"
-#include "stack.h"
+#ifndef OPS_H
+# define OPS_H
 
-t_stack *create()
-{
-	t_stack	*stack;
+# include "struct.h"
 
-	stack = (t_stack *)malloc(sizeof(t_stack));
-	stack->size = 0;
-	stack->elements = NULL;
-	return (stack);
-}
+t_stack	*swap(t_stack *stack);
+t_stack	*push(t_stack *dest, t_stack *src);
+t_stack	*rotate(t_stack *stack);
+t_stack	*rev_rotate(t_stack *stack);
+
+#endif

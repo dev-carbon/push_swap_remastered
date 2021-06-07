@@ -1,24 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   create.c                                           :+:      :+:    :+:   */
+/*   rev_rotate.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: humanfou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/01 16:59:03 by humanfou          #+#    #+#             */
-/*   Updated: 2021/06/07 00:24:28 by humanfou         ###   ########.fr       */
+/*   Created: 2021/06/07 13:36:31 by humanfou          #+#    #+#             */
+/*   Updated: 2021/06/07 13:36:33 by humanfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libs.h"
-#include "stack.h"
 
-t_stack *create()
-{
-	t_stack	*stack;
-
-	stack = (t_stack *)malloc(sizeof(t_stack));
-	stack->size = 0;
-	stack->elements = NULL;
-	return (stack);
-}

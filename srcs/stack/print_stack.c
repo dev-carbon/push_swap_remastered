@@ -12,7 +12,6 @@
 
 #include "stack.h"
 #include "libs.h"
-#include "struct.h"
 
 void	print_stack(t_stack *stack)
 {

@@ -8,6 +8,7 @@
 		"*.tcc": "c",
 		"functional": "c",
 		"random": "c",
-		"streambuf": "c"
+		"streambuf": "c",
+		"algorithm": "c"
 	}
 }

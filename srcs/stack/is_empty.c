@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "libs.h"
-#include "struct.h"
-#include "utils.h"
 #include "stack.h"
 
 int	is_empty(t_stack *stack)

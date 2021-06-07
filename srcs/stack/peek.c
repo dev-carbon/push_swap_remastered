@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libs.h"
-#include "struct.h"
 #include "utils.h"
 #include "stack.h"
 
