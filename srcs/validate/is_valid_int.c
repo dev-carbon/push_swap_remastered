@@ -54,5 +54,5 @@ int	is_valid_int(char *str)
 	if (is_overflow(str))
 		return (0);
 	nbr = ft_atoi(str);
-	return(1);
+	return (1);
 }

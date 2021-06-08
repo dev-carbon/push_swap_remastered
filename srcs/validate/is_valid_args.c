@@ -18,9 +18,9 @@
 
 int	is_valid_args(int ac, char **av, t_vars *vars)
 {
-	int		i;
-	int		j;
-	
+	int	i;
+	int	j;
+
 	if (ac > 2)
 		return (0);
 	i = -1;

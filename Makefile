@@ -18,7 +18,7 @@ CCFLAG = -Wall -Wextra -Werror -g
 
 LIBFT = -Llibft -lft
 
-SANITIZE = -fsanitize=address,undefined
+# SANITIZE = -fsanitize=address
 
 HEADERS = -I./includes/ \
 		-I./libft/ \
@@ -40,7 +40,8 @@ SRCS_MANDATORY = srcs/driver/push_swap.c \
 				srcs/stack/is_empty.c \
 				srcs/stack/is_sorted.c \
 				srcs/stack/print_stack.c \
-				srcs/utils/destroy_split.c \
+				srcs/utils/destroy_stack.c \
+				srcs/utils/destroy_vars.c \
 				srcs/utils/exit_prog.c \
 				srcs/validate/is_valid_args.c \
 				srcs/validate/is_valid_int.c \

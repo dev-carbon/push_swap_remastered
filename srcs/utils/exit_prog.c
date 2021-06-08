@@ -15,14 +15,14 @@
 #include "utils.h"
 #include "libft.h"
 
-int	exit_prog(int status, t_vars *vars)
+int	exit_prog(int status, t_vars *vars, t_stack *stack)
 {
 	if (status == EXIT_FAILURE)
 		write(STDERR_FILENO, "Error\n", 6);
 	if (status == EXIT_SUCCESS)
 		write(STDOUT_FILENO, "Bye!\n", 5);
-	(void)vars;
-	// destroy_split(vars->split);
+	destroy_vars(vars);
+	destroy_stack(stack);
 	exit(status);
 	return (0);
 }

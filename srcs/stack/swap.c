@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ops.h"
+#include "stack.h"
+#include "libft.h"
 
 t_stack	*swap(t_stack *stack)
 {
-	int	tmp;
+	t_element	*el;
 
-	tmp = stack->elements->value;
-	stack->elements->value = stack->elements->next->value;
-	stack->elements->next->value = tmp;
+	el = stack->elements;
+	ft_swap(&el->value, &el->next->value);
 	return (stack);
 }

@@ -16,7 +16,7 @@
 
 t_stack	*pop(t_stack *stack)
 {
-	t_element *top;
+	t_element	*top;
 
 	if (!is_empty(stack))
 	{

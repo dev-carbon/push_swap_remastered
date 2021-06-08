@@ -19,21 +19,21 @@
 
 int	main(int ac, char **av)
 {
-	t_vars *vars;
+	t_vars	*vars;
 	t_stack	*stack;
 
 	if (ac > 1)
 	{
 		vars = (t_vars *)malloc(sizeof(t_vars));
 		if (vars == NULL)
-			exit_prog(EXIT_FAILURE, NULL);
+			exit_prog(EXIT_FAILURE, NULL, NULL);
 		if (!is_valid_args(ac, av, vars))
-			exit_prog(EXIT_FAILURE, vars);
+			exit_prog(EXIT_FAILURE, vars, NULL);
 		stack = create();
 		fill(stack, vars->split);
 		if (!is_sorted(stack, &vars->flag))
 			sort(stack);
-		exit_prog(EXIT_SUCCESS, vars);
+		exit_prog(EXIT_SUCCESS, vars, stack);
 	}
 	return (0);
 }

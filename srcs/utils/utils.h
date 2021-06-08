@@ -15,7 +15,8 @@
 
 # include "struct.h"
 
-int	exit_prog(int status, t_vars *vars);
-void	destroy_split(char **split);
+int		exit_prog(int status, t_vars *vars, t_stack *stack);
+void	destroy_vars(t_vars *vars);
+void	destroy_stack(t_stack *stack);
 
 #endif

@@ -13,7 +13,7 @@
 #include "libs.h"
 #include "stack.h"
 
-t_stack *create()
+t_stack	*create(void)
 {
 	t_stack	*stack;
 

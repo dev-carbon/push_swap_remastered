@@ -15,8 +15,6 @@
 
 t_stack	*sort(t_stack *stack)
 {
-	print_stack(stack);
-	swap(stack);
-	print_stack(stack);
+	printf("please sort me!\n");
 	return (stack);
 }

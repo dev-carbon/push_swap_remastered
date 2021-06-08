@@ -16,11 +16,11 @@
 
 t_stack	*push(t_stack *stack, int nbr)
 {
-	t_element *new;
+	t_element	*new;
 
 	new = (t_element *)malloc(sizeof(t_element));
 	if (new == NULL)
-		exit_prog(EXIT_FAILURE, NULL);
+		exit_prog(EXIT_FAILURE, NULL, NULL);
 	stack->size += 1;
 	new->value = nbr;
 	new->next = stack->elements;

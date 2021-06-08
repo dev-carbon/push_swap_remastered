@@ -15,14 +15,14 @@
 
 typedef struct s_element
 {
-	int				value;
+	int					value;
 	struct s_element	*next;
 }	t_element;
 
 typedef struct s_stack
 {
-	int size;
-	t_element *elements;
+	int			size;
+	t_element	*elements;
 }	t_stack;
 
 typedef struct s_vars

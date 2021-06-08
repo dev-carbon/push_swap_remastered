@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   destroy_split.c                                    :+:      :+:    :+:   */
+/*   destroy_stack.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: humanfou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/04 17:05:33 by humanfou          #+#    #+#             */
-/*   Updated: 2021/06/04 17:05:50 by humanfou         ###   ########.fr       */
+/*   Created: 2021/06/08 17:59:51 by humanfou          #+#    #+#             */
+/*   Updated: 2021/06/08 18:03:32 by humanfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "stack.h"
 #include "libs.h"
-#include "utils.h"
 
-void	destroy_split(char **split)
+void	destroy_stack(t_stack *stack)
 {
-	int	i;
+	t_element	*el;
+	t_element	*current;
 
-	if (split != NULL)
+	el = stack->elements;
+	while (el)
 	{
-		i = 0;
-		while (split[i] != NULL)
-		{
-			free(split[i]);
-			split[i] = NULL;
-			i++;
-		}
-		free(split);
-		split = NULL;
+		current = el;
+		el = el->next;
+		free(current);
+		current = NULL;
 	}
+	free(stack);
+	stack = NULL;
 }

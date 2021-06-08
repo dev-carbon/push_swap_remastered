@@ -16,7 +16,7 @@
 
 int	is_sorted(t_stack *stack, int *flag)
 {
-	t_element *el;
+	t_element	*el;
 
 	(void)flag;
 	el = stack->elements;

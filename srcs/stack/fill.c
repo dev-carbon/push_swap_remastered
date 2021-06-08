@@ -14,7 +14,6 @@
 #include "libs.h"
 #include "libft.h"
 
-
 t_stack	*fill(t_stack *stack, char **list)
 {
 	int	i;
