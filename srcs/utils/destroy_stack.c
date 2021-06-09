@@ -18,14 +18,17 @@ void	destroy_stack(t_stack *stack)
 	t_element	*el;
 	t_element	*current;
 
-	el = stack->elements;
-	while (el)
+	if (stack != NULL)
 	{
-		current = el;
-		el = el->next;
-		free(current);
-		current = NULL;
+		el = stack->elements;
+		while (el)
+		{
+			current = el;
+			el = el->next;
+			free(current);
+			current = NULL;
+		}
+		free(stack);
+		stack = NULL;
 	}
-	free(stack);
-	stack = NULL;
 }

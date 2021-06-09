@@ -17,20 +17,20 @@ void	destroy_vars(t_vars *vars)
 {
 	int	i;
 
-	if (vars->split != NULL)
-	{
-		i = 0;
-		while (vars->split[i] != NULL)
-		{
-			free(vars->split[i]);
-			vars->split[i] = NULL;
-			i++;
-		}
-		free(vars->split);
-		vars->split = NULL;
-	}
 	if (vars != NULL)
 	{
+		if (vars->split != NULL)
+		{
+			i = 0;
+			while (vars->split[i] != NULL)
+			{
+				free(vars->split[i]);
+				vars->split[i] = NULL;
+				i++;
+			}
+			free(vars->split);
+			vars->split = NULL;
+		}
 		free(vars);
 		vars = NULL;
 	}
