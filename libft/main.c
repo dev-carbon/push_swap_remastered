@@ -20,8 +20,7 @@ int	main(int ac, char **av)
 	if (ac > 1)
 	{
 		nbr = ft_atoi(av[1]);
-		printf("%ld\n", nbr);	
-		// ft_putnbr(nbr);
+		printf("%ld\n", nbr);
 		return (0);
 	}
 }

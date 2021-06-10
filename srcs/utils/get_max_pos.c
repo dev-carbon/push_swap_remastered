@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   get_max_pos.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: humanfou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/07 13:36:21 by humanfou          #+#    #+#             */
-/*   Updated: 2021/06/07 13:36:23 by humanfou         ###   ########.fr       */
+/*   Created: 2021/06/10 12:37:46 by humanfou          #+#    #+#             */
+/*   Updated: 2021/06/10 12:37:48 by humanfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stack.h"
+#include "utils.h"
 #include "libs.h"
-#include "libft.h"
 
-t_stack	*rotate(t_stack *stack)
+int	get_max_pos(t_stack *stack)
 {
+	int			i;
+	int			pos;
+	int			max;
 	t_element	*el;
 
+	i = 1;
+	pos = 1;
 	el = stack->elements;
-	while (el->next != NULL)
+	max = el->value;
+	while (el != NULL)
 	{
-		ft_swap(&el->value, &el->next->value);
+		if (max < el->value)
+		{
+			max = el->value;
+			pos = i;
+		}
+		i++;
 		el = el->next;
 	}
-	return (stack);
+	return (pos);
 }

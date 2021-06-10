@@ -15,6 +15,8 @@
 
 # include "struct.h"
 
+int		get_max_pos(t_stack *stack);
+int		get_min_pos(t_stack *stack);
 int		exit_prog(int status, t_vars *vars, t_stack *stack);
 void	destroy_vars(t_vars *vars);
 void	destroy_stack(t_stack *stack);

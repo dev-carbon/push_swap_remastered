@@ -13,7 +13,7 @@
 #ifndef CONST_H
 # define CONST_H
 
-# define ASC 1
-# define DESC 0
+# define ROTATE 0
+# define REV_ROTATE 1
 
 #endif

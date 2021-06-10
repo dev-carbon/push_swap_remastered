@@ -13,12 +13,12 @@
 #include "stack.h"
 #include "libs.h"
 #include "const.h"
+#include "utils.h"
 
-int	is_sorted(t_stack *stack, int *flag)
+int	is_sorted(t_stack *stack)
 {
 	t_element	*el;
 
-	(void)flag;
 	el = stack->elements;
 	while (el->next != NULL)
 	{

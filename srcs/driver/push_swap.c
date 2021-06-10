@@ -29,10 +29,9 @@ int	main(int ac, char **av)
 			exit_prog(EXIT_FAILURE, NULL, NULL);
 		if (!is_valid_args(ac, av, vars))
 			exit_prog(EXIT_FAILURE, vars, NULL);
-		stack = create();
+		stack = new_stack();
 		fill(stack, vars->split);
-		if (!is_sorted(stack, &vars->flag))
-			sort(stack);
+		sort(stack);
 		exit_prog(EXIT_SUCCESS, vars, stack);
 	}
 	return (0);
