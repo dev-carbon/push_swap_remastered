@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   push_n_swap_a.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: humanfou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/07 13:36:03 by humanfou          #+#    #+#             */
-/*   Updated: 2021/06/07 13:36:05 by humanfou         ###   ########.fr       */
+/*   Created: 2021/06/11 15:26:56 by humanfou          #+#    #+#             */
+/*   Updated: 2021/06/11 15:27:33 by humanfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ops.h"
 #include "stack.h"
-#include "libs.h"
-#include "utils.h"
+#include "libft.h"
 
-t_stack	*push(t_stack *stack, int nbr)
+void	push_n_swap_a(t_stack *stack_a, t_stack *stack_b)
 {
-	t_element	*new;
-	t_element	*head;
-
-	head = stack->elements;
-	new = (t_element *)malloc(sizeof(t_element));
-	if (new == NULL)
-		exit_prog(EXIT_FAILURE, NULL, NULL);
-	stack->size += 1;
-	new->value = nbr;
-	new->next = head;
-	stack->elements = new;
-	return (stack);
+	while (!is_empty(stack_a) && peek(stack_a) < peek(stack_b))
+	{
+		ft_putstrnl("pa");
+		push(stack_a, peek(stack_b));
+		pop(stack_b);
+		ft_putstrnl("sa");
+		swap(stack_a);
+	}
 }

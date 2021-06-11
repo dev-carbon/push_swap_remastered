@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_stack.c                                      :+:      :+:    :+:   */
+/*   rev_rotate_a.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: humanfou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/06 22:01:20 by humanfou          #+#    #+#             */
-/*   Updated: 2021/06/06 22:01:22 by humanfou         ###   ########.fr       */
+/*   Created: 2021/06/11 11:09:37 by humanfou          #+#    #+#             */
+/*   Updated: 2021/06/11 11:09:39 by humanfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ops.h"
+#include "libft.h"
 #include "stack.h"
-#include "libs.h"
+#include "utils.h"
 
-void	print_stack(t_stack *stack)
+void	rev_rotate_a(t_stack *stack)
 {
-	t_element	*el;
-
-	el = stack->elements;
-	printf("\e[4msize\e[0m: %d\n", stack->size);
-	while (el)
+	if (get_min_pos(stack) == 3)
 	{
-		printf("%d\n", el->value);
-		el = el->next;
+		ft_putstrnl("rra");
+		rev_rotate(stack);
 	}
 }

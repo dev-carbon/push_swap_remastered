@@ -9,6 +9,7 @@
 		"functional": "c",
 		"random": "c",
 		"streambuf": "c",
-		"algorithm": "c"
+		"algorithm": "c",
+		"ops.h": "c"
 	}
 }

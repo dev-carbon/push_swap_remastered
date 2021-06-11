@@ -20,5 +20,8 @@ int		get_min_pos(t_stack *stack);
 int		exit_prog(int status, t_vars *vars, t_stack *stack);
 void	destroy_vars(t_vars *vars);
 void	destroy_stack(t_stack *stack);
+void	print_initial_stack(t_stack *stack);
+void	print_stack(t_stack *stack);
+void	print_stacks(t_stack *stack_a, t_stack *stack_b);
 
 #endif

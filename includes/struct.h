@@ -32,4 +32,10 @@ typedef struct s_vars
 	int		flag;
 }	t_vars;
 
+typedef struct s_operation
+{
+	char	*label;
+	int		len;
+}	t_operation;
+
 #endif

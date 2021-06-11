@@ -24,6 +24,7 @@ t_stack	*pop(t_stack *stack)
 		stack->elements = stack->elements->next;
 		stack->size -= 1;
 		free(top);
+		top = NULL;
 	}
 	return (stack);
 }

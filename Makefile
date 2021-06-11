@@ -18,15 +18,22 @@ CCFLAG = -Wall -Wextra -Werror -g
 
 LIBFT = -Llibft -lft
 
-SANITIZE = -fsanitize=address
+# SANITIZE = -fsanitize=address
 
 HEADERS = -I./includes/ \
 		-I./libft/ \
+		-I./srcs/ops/ \
 		-I./srcs/stack/ \
 		-I./srcs/utils/ \
 		-I./srcs/validate/ \
 
 SRCS_MANDATORY = srcs/driver/push_swap.c \
+				srcs/ops/push_a.c \
+				srcs/ops/push_n_swap_a.c \
+				srcs/ops/push_b.c \
+				srcs/ops/rotate_a.c \
+				srcs/ops/rev_rotate_a.c \
+				srcs/ops/swap_a.c \
 				srcs/stack/swap.c \
 				srcs/stack/push.c \
 				srcs/stack/rotate.c \
@@ -39,7 +46,9 @@ SRCS_MANDATORY = srcs/driver/push_swap.c \
 				srcs/stack/sort.c \
 				srcs/stack/is_empty.c \
 				srcs/stack/is_sorted.c \
-				srcs/stack/print_stack.c \
+				srcs/utils/print_initial_stack.c \
+				srcs/utils/print_stack.c \
+				srcs/utils/print_stacks.c \
 				srcs/utils/get_min_pos.c \
 				srcs/utils/get_max_pos.c \
 				srcs/utils/destroy_stack.c \

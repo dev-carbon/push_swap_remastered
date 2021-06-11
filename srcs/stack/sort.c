@@ -13,6 +13,8 @@
 #include "stack.h"
 #include "libs.h"
 #include "utils.h"
+#include "libft.h"
+#include "ops.h"
 
 t_stack	*sort(t_stack *sa)
 {
@@ -21,15 +23,22 @@ t_stack	*sort(t_stack *sa)
 	sb = new_stack();
 	while (!is_empty(sa))
 	{
+		if (is_empty(sb) && is_sorted(sa))
+			break ;
 		if (sa->size == 3 && !is_sorted(sa))
 		{
-			if (get_max_pos(sa) == 1)
-				printf("ra");
-			else if (get_min_pos(sa) == 3)
-				printf("rra");
+			rotate_a(sa);
+			rev_rotate_a(sa);
 		}
-		break ;
+		swap_a(sa);
+		push_n_swap_a(sa, sb);
+		if (!is_sorted(sa))
+			push_b(sb, sa);
+		else
+			break ;
 	}
+	while (!is_empty(sb))
+		push_a(sa, sb);
 	destroy_stack(sb);
 	return (sa);
 }

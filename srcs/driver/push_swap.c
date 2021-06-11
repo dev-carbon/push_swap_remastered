@@ -31,7 +31,11 @@ int	main(int ac, char **av)
 			exit_prog(EXIT_FAILURE, vars, NULL);
 		stack = new_stack();
 		fill(stack, vars->split);
+		print_initial_stack(stack);
+		ft_putstrnl("\n\e[4mOperations\e[m:");
 		sort(stack);
+		ft_putstrnl("\n\e[4mFinal stack\e[m:");
+		print_stack(stack);
 		exit_prog(EXIT_SUCCESS, vars, stack);
 	}
 	return (0);

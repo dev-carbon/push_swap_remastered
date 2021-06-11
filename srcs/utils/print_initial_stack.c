@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   print_initial_stack.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: humanfou <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/07 13:36:03 by humanfou          #+#    #+#             */
-/*   Updated: 2021/06/07 13:36:05 by humanfou         ###   ########.fr       */
+/*   Created: 2021/06/11 14:48:33 by humanfou          #+#    #+#             */
+/*   Updated: 2021/06/11 14:48:34 by humanfou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
 #include "libs.h"
-#include "utils.h"
+#include "libft.h"
 
-t_stack	*push(t_stack *stack, int nbr)
+void	print_initial_stack(t_stack *stack)
 {
-	t_element	*new;
-	t_element	*head;
+	t_element	*el;
 
-	head = stack->elements;
-	new = (t_element *)malloc(sizeof(t_element));
-	if (new == NULL)
-		exit_prog(EXIT_FAILURE, NULL, NULL);
-	stack->size += 1;
-	new->value = nbr;
-	new->next = head;
-	stack->elements = new;
-	return (stack);
+	el = stack->elements;
+	ft_putstrnl("\e[4mInitial stack\e[m:");
+	while (el)
+	{
+		ft_putnbr(el->value);
+		write(1, "\n", 1);
+		el = el->next;
+	}
+	write(1, "\n", 1);
 }

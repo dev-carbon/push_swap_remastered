@@ -12,7 +12,6 @@
 
 #include "stack.h"
 #include "libs.h"
-#include "const.h"
 #include "utils.h"
 
 int	is_sorted(t_stack *stack)
